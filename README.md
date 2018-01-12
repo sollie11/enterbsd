@@ -23,7 +23,7 @@ instructions.txt to show how I setup FreeBSD, but your own options really won't 
 
 2. Reboot the newly installed system from HD, remember to keep the CDROM device attached.
 
-3. Modify sshd to allow root accesss. (We can change this back later.)
+3. Modify sshd to allow root access. (We can change this back later.)
 login: root
 
 `ee /etc/ssh/sshd-config`
@@ -93,4 +93,20 @@ the size of the ISO.
 
 `chmod +x 00prep`
 
+
+7. Copy and paste the contents of script.sh
+
+`ee 00prep`
+
+*Paste the contents, Esc-a-a to save*
+
+8. Run the script. This creates all the necessary files. We make a symlink to the real directory too.
+
+`./00prep`
+
+`ln -s /data/disk/mkiso /1`
+
+`cd /1`
+
+`ls -l`
 
