@@ -27,42 +27,70 @@ instructions.txt to show how I setup FreeBSD, but your own options really won't 
 login: root
 
 `ee /etc/ssh/sshd-config`
+
 *Find this line and change to yes:*
+
 `PermitRootLogin yes`
+
 *Esc-a-a to save*
 
 4. Restart sshd and ssh from your desktop machine.
 
 `service sshd restart`
+
 `ifconfig`
 
 5. Run freebsd-update
+
 `freebsd-update fetch`
+
 *Press qq a few times until prompt appears*
+
 `freebsd-update install`
+
 
 6. Copy and paste a few shell commands to install mkisofs, the utility we need to create the ISOs. We
 do not want to install via pkg, because pkg itself downloads and consumes around 50MB, which adds to 
 the size of the ISO.
 
 `cd /root`
+
 `fetch http://pkg.freebsd.org/FreeBSD:11:amd64/release_1/All/cdrtools-3.01.txz`
+
 `fetch http://pkg.freebsd.org/FreeBSD:11:amd64/release_1/All/gettext-runtime-0.19.8.1_1.txz`
+
 `fetch http://pkg.freebsd.org/FreeBSD:11:amd64/release_1/All/indexinfo-0.2.6.txz`
+
 `unxz *.txz`
+
 `mkdir usr`
+
 `cd usr`
+
 `tar -pxvf ../cdrtools*` 
+
 `tar -pxvf ../gettext*`
+
 `tar -pxvf ../index*`
+
 `cd usr/local`
+
 `tar -pcf - . | ( cd / && tar -pxf - )`
+
 `cd ../../../`
+
 `rm -rf usr`
+
 `rm *.tar`
 
-mkdir /mnt/cdrom
-mount -t cd9660 /dev/cd0 /mnt/cdrom
-cd /
-touch 00prep
-chmod +x 00prep`
+`mkdir /mnt/cdrom`
+
+`mount -t cd9660 /dev/cd0 /mnt/cdrom`
+
+`cd /`
+
+`touch 00prep`
+
+`chmod +x 00prep`
+
+
