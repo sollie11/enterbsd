@@ -4,7 +4,7 @@ These scripts create a FreeBSD livecd ISO, which can be used with or without a h
 It can be installed to hard disk or optionally, the hard disk may be used for data only.
 
 The scripts can be installed on first reboot from the standard FreeBSD installation. They do not
-depend on any extra downloaded software, except makeisofs, which we'll installed via a hack, 
+depend on any extra downloaded software, except makeisofs, which will be installed via a hack, 
 (without using the pkg system.) After our first ISO is created from a clean FreeBSD install as 
 above, the size will be around **230MB**. Only the unneeded boot/kernel modules are removed from 
 the ISO, the rest is a complete FreeBSD install. The reason for the small size is that the 
