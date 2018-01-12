@@ -119,7 +119,7 @@ on 2018-01-12.
 
 `./06mksys`
 
-*Finally, create the ISO, enter a suffix for your ISO filename.
+*Finally, create the ISO, enter a suffix for your ISO filename.*
 
 `./07mkcd FIRST`
 
@@ -129,7 +129,7 @@ on 2018-01-12.
 `ls -l`
 
 
-Copy the file to your VirtualBox ISO directory and setup a machine to boot from it!
+Copy the file to your VirtualBox ISO directory (via sftp) and setup a machine to boot from it!
 
 
 
