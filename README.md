@@ -51,7 +51,8 @@ login: root
 
 6. Copy and paste a few shell commands to install mkisofs, the utility we need to create the ISOs. We
 do not want to install via pkg, because pkg itself downloads and consumes around 50MB, which adds to 
-the size of the ISO.
+the size of the ISO. Please download the latest versions of the three files, these versions were valid 
+on 2018-01-12. 
 
 `cd /root`
 
@@ -109,4 +110,26 @@ the size of the ISO.
 `cd /1`
 
 `ls -l`
+
+9. The files starting with '0' should now be run in succession:
+
+`./00clean && ./01create && ./02clone && ./04etc`
+
+*The next one could take some time*
+
+`./06mksys`
+
+*Finally, create the ISO, enter a suffix for your ISO filename.
+
+`./07mkcd FIRST`
+
+
+*The ISO file will is located in the same directory*
+
+`ls -l`
+
+
+Copy the file to your VirtualBox ISO directory and setup a machine to boot from it!
+
+
 
